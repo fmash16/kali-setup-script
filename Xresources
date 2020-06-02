@@ -1,0 +1,90 @@
+! URxvt*termName: rxvt
+URxvt*loginShell:  true
+
+! Perl extensions
+URxvt.perl-ext-common: eval,default,matcher,resize-font
+
+! Enables copu,paste feature using eval extension that ships with rxvt-unicode
+URxvt.keysym.Shift-Control-V: eval:paste_clipboard
+URxvt.keysym.Shift-Control-C: eval:selection_to_clipboard
+
+! Open links in firefox
+! URxvt.perl-ext-common : default,matcher
+
+URxvt.urlLauncher     : firefox
+URxvt.matcher.button  : 1
+
+!Xterm escapes, for tmux window switching using Ctrl+[0-9] 
+URxvt.keysym.Control-1: \033[27;5;49~
+URxvt.keysym.Control-2: \033[27;5;50~
+URxvt.keysym.Control-3: \033[27;5;51~
+URxvt.keysym.Control-4: \033[27;5;52~
+URxvt.keysym.Control-5: \033[27;5;53~
+URxvt.keysym.Control-6: \033[27;5;54~
+URxvt.keysym.Control-7: \033[27;5;55~
+URxvt.keysym.Control-8: \033[27;5;56~
+URxvt.keysym.Control-9: \033[27;5;57~
+URxvt.keysym.Control-0: \033[27;5;48~
+
+
+! Change the font size on the go
+! URxvt.perl-ext-common: resize-font
+
+! Disables ISO 14755 mode on pressing C-Shift
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+
+URxvt*font: xft:Fira Code:style=Medium:pixelsize=13,xft:PowerlineSymbols:style=Medium:pixelsize=12,xft:Material Icons:size=10
+URxvt.letterSpace: -1 
+Xft*dpi: 98
+Xft*antialias: true
+Xft*hinting: true
+Xft*hintstyle: hintfull
+Xft*rgba: rgb
+
+urxvt*scrollBar: false
+! to match gnome-terminal "Linux console" scheme
+! foreground/background
+URxvt*background: #424242
+URxvt*foreground: #ffffff
+urxvt.transparent: true
+urxvt*shading: 15
+URxvt*tintColor: #ffffff
+
+! URxvt*geometry: 85x20
+*internalBorder: 5
+
+! special
+URxvt.cursorColor: #D8D8D8
+*.cursorBlink: true
+*.cursorUnderline: false
+
+*cursorColor:   #66ff66
+
+
+
+!black
+urxvt.color0:#2e2e2e
+urxvt.color8:#2e2e2e
+!red
+urxvt.color1:#FE2E64
+urxvt.color9:#FA5882
+!green
+urxvt.color2:#01DF74
+urxvt.color10:#01DF74
+!yellow
+urxvt.color3:#af865a
+urxvt.color11:#af865a
+!blue
+urxvt.color4:#81f7be
+urxvt.color12:#81f7be
+!magenta
+urxvt.color5:#f7819f
+urxvt.color13:#f7819f
+!cyan
+urxvt.color6:#6d715e
+urxvt.color14:#6d715e
+!white
+urxvt.color7:#c0b18b
+URxvt.color15:#bdbdbd
