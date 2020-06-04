@@ -24,13 +24,6 @@ sudo go get github.com/ffuf/ffuf
 # Tools installation
 
 sudo gem install evil-winrm
-## Impacket tools 
-  cd /tmp
-  wget https://github.com/SecureAuthCorp/impacket/releases/download/impacket_0_9_21/impacket-0.9.21.tar.gz
-  tar xzvf impacket-0.9.21.tar.gz
-  cd impacket-0.9.21
-  sudo pip install .
-
 
 # tools in /opt
 
@@ -39,11 +32,19 @@ sudo git clone https://github.com/carlospolop/privilege-escalation-awesome-scrip
 sudo git clone https://github.com/danielmiessler/SecLists.git
 sudo git clone https://github.com/r3motecontrol/Ghostpack-CompiledBinaries
 sudo wget https://download.sysinternals.com/files/PSTools.zip -P /tmp;unzip /tmp/PSTools.zip -d /opt/PSTools
+## Impacket tools
+  sudo curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+  sudo python get-pip.py
+  sudo git clone https://github.com/SecureAuthCorp/impacket
+  cd impacket
+  sudo pip2 -r requirements.txt
+  sudo python setup.py install
 ## Crackmapexec 
  sudo apt-get install -y libssl-dev libffi-dev python-dev build-essential
  sudo git clone --recursive https://github.com/byt3bl33d3r/CrackMapExec
  cd CrackMapExec
- sudo python3 setup.py install
+ pip2 install -r requirements.txt
+ sudo python setup.py install
 
 
 

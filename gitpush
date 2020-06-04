@@ -1,0 +1,11 @@
+#! /bin/bash
+
+gituser="fmash16"
+read -p "Enter commit message: " msg
+
+git add .
+git commit -m "$msg"
+git status
+git push -u origin master << EOM
+$gituser
+EOM
